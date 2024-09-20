@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map House Of The Dragon</title>
+    <link rel="stylesheet" href="css1.3.css">
+</head>
+<body>
+    <div class="HOTD"></div>
+        <div class="Top">
+            <div class="First">
+                <p><img src="https://blenderartists.org/uploads/default/original/4X/2/0/4/204fb4477939a47c5524bd3af6b55b5fef44cee3.png" 
+                    style="width: 60px; border-radius: 100%;">
+                </p>
+            </div>
+            <div class="center">
+                <a href="w1.html">Home</a>
+                <a href="w1.1.html">History</a>
+                <a href="w1.2.html">Dragon</a>
+                <a href="w1.3.html"style="
+                background-color: rgb(255, 255, 255); 
+                width: 80px; 
+                height: 45px; 
+                border-radius: 30px;
+                align-items: center;
+                display: flex;
+                padding: 15px;
+                ">Map</a>
+            </div>
+            <div class="End">
+                <p>SEARCH</p>
+                <p>LOG IN</p>
+            </div>
+        </div>
+        <div class="BG">
+    <h1>Map House Of The Dragon</h1>
+
+    <div class="History">
+        <a class="img">
+            <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/06/main-photo-2024-06-22t120614-795.jpg" id="zoomable-image" alt="Map House Of The Dragon">
+        </a>
+    </div>
+
+    <script>
+        const img = document.getElementById('zoomable-image');
+        let scale = 1;
+        const scaleFactor = 0.1;
+
+        img.addEventListener('wheel', function(event) {
+            event.preventDefault();
+            if (event.deltaY < 0) {
+                scale += scaleFactor;
+            } else {
+                scale = Math.max(scale - scaleFactor, 1);
+            }
+            img.style.transform = `scale(${scale})`;
+        });
+    </script>
+    </div>
+</body>
+</html>
